@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		Screen screen = TerminalFacade.createScreen();
 		screen.startScreen();
-		screen.putString(10, 5, "Dobry wieczór, coœ siê... coœ siê popsu³o i nie by³o mnie s³ychaæ...", Terminal.Color.CYAN, Terminal.Color.BLACK);
+		screen.putString(10, 5, "chujDobry wieczór, coœ siê... coœ siê popsu³o i nie by³o mnie s³ychaæ...", Terminal.Color.CYAN, Terminal.Color.BLACK);
 		screen.refresh();
 		
 		StringBuilder sb = new StringBuilder();
