@@ -25,7 +25,7 @@ public class Main {
 		//System.out.println(window.getBorder());
 		window.setWindowSizeOverride(new TerminalSize(20, 10));
 		window.setSoloWindow(true);
-
+		
 		//Panel panelHolder = new Panel("", Orientation.VERTICAL);
 		//panelHolder.setPreferredSize(new TerminalSize(40, 10));
 

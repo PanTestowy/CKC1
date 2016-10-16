@@ -8,10 +8,12 @@ public class Game {
 		Screen gameScreen = TerminalFacade.createScreen();
 		gameScreen.startScreen();
 		Position pos = new Position();
-		pos.setX(0);
-		pos.setY(0);
+		pos.setX(1);
+		pos.setY(1);
 		
 		gameScreen.putString(pos.getX(), pos.getY(), "X", Terminal.Color.WHITE, Terminal.Color.WHITE);
+		gameScreen.putString(0, 0, " ", Terminal.Color.BLACK, Terminal.Color.BLACK);
+
 		gameScreen.refresh();
 		boolean keepRunning=true;
 		while(keepRunning){
@@ -29,6 +31,28 @@ public class Game {
 				pos.setX(pos.getX()+1);
 				gameScreen.putString(pos.getX(), pos.getY(), "X", Terminal.Color.WHITE, Terminal.Color.WHITE);
 				gameScreen.refresh();
+				System.out.println(pos.getX()+" "+pos.getY());
+				break;
+			case ArrowLeft:
+				gameScreen.putString(pos.getX(), pos.getY(), " ", Terminal.Color.BLACK, Terminal.Color.BLACK);
+				pos.setX(pos.getX()-1);
+				gameScreen.putString(pos.getX(), pos.getY(), "X", Terminal.Color.WHITE, Terminal.Color.WHITE);
+				gameScreen.refresh();
+				System.out.println(pos.getX()+" "+pos.getY());
+				break;
+			case ArrowDown:
+				gameScreen.putString(pos.getX(), pos.getY(), " ", Terminal.Color.BLACK, Terminal.Color.BLACK);
+				pos.setY(pos.getY()+1);
+				gameScreen.putString(pos.getX(), pos.getY(), "X", Terminal.Color.WHITE, Terminal.Color.WHITE);
+				gameScreen.refresh();
+				System.out.println(pos.getX()+" "+pos.getY());
+				break;
+			case ArrowUp:
+				gameScreen.putString(pos.getX(), pos.getY(), " ", Terminal.Color.BLACK, Terminal.Color.BLACK);
+				pos.setY(pos.getY()-1);
+				gameScreen.putString(pos.getX(), pos.getY(), "X", Terminal.Color.WHITE, Terminal.Color.WHITE);
+				gameScreen.refresh();
+				System.out.println(pos.getX()+" "+pos.getY());
 				break;
 			default: continue;
 			}

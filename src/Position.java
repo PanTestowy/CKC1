@@ -6,11 +6,13 @@ public class Position {
 	}
 	
 	public void setX(int x){
-		this.x=x;
+		if(x<99 && x>0)
+			this.x=x;
 	}
 	
 	public void setY(int y){
-		this.y=y;
+		if(y<29 && y>0)
+			this.y=y;
 	}
 	
 	public int getX(){
